@@ -23,7 +23,7 @@ class CrocodileGame {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
 
-       // System.out.println("Ласкаво просимо до гри 'Крокодил'!");
+        System.out.println("Ласкаво просимо до гри 'Крокодил'!");
 
         while (gameRunning) {
             System.out.println("Гравець " + currentPlayer + ", введіть номер зуба, який хочете натиснути (1-" + NUM_TEETH + "):");
@@ -35,10 +35,10 @@ class CrocodileGame {
             }
 
             int biteTooth = random.nextInt(NUM_TEETH) + 1;
-          //  System.out.println("Крокодил вкусив зуб номер " + biteTooth + "!");
+            System.out.println("Крокодил вкусив зуб номер " + biteTooth + "!");
 
             if (selectedTooth == biteTooth) {
-                System.out.println("Player " + currentPlayer + " втратив очко!");
+                System.out.println("Гравець " + currentPlayer + " втратив очко!");
                 if (currentPlayer == 1) {
                     player1Score++;
                 } else {
@@ -48,7 +48,7 @@ class CrocodileGame {
                 System.out.println("Гравець " + currentPlayer + " вижив!");
             }
 
-          //  System.out.println("Рахунок: Гравець 1: " + player1Score + " | Гравець 2: " + player2Score);
+            System.out.println("Рахунок: Гравець 1: " + player1Score + " | Гравець 2: " + player2Score);
 
             if (player1Score >= WINNING_SCORE || player2Score >= WINNING_SCORE) {
                 if (player1Score > player2Score) {
@@ -69,11 +69,11 @@ class CrocodileGame {
                 }
             }
 
-            // Switch the current player
+
             currentPlayer = (currentPlayer == 1) ? 2 : 1;
         }
 
-      //  System.out.println("Дякуємо за гру!");
+        System.out.println("Дякуємо за гру!");
         scanner.close();
     }
 }
